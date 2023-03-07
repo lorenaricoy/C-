@@ -1,8 +1,10 @@
 ﻿using bytebank.Modelos.Conta;
 using bytebank_ATENDIMENTO.bytebank.Util;
+using System;
 
 Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
 
+#region TestaArray
 //TestaArrayInt();
 //BuscaStringArray();
 
@@ -105,3 +107,58 @@ void TestaArrayDeObjetos()
 }
 
 TestaArrayDeObjetos();
+
+#endregion
+
+void AtendimentoCliente(){
+    char opcao=0;
+    while(opcao!='6'){
+        Console.Clear();
+        Console.WriteLine("=================================");
+        Console.WriteLine("===        Atendimento        ===");
+        Console.WriteLine("===1 Cadastrar conta          ===");
+        Console.WriteLine("===2 Listar contas            ===");
+        Console.WriteLine("===3 Remover conta            ===");
+        Console.WriteLine("===4 Ordenar contas           ===");
+        Console.WriteLine("===5 Pesquisar conta          ===");
+        Console.WriteLine("===6 Sair do sistema          ===");
+        Console.WriteLine("=================================");
+        Console.WriteLine("/n/n");
+        Console.WriteLine("Digite a opção desejada: ");
+        opcao= Console.ReadLine();
+
+        switch(opcao){
+            case '1':
+        }
+    }
+} 
+
+void CadastrarConta(){
+    Console.WriteLine("=================================");
+    Console.WriteLine("===     CADASTRO DE CONTAS    ===");
+    Console.WriteLine("=================================");
+    Console.WriteLine("/n");
+    Console.WriteLine("=== Informe os dados da conta ===");
+
+    Console.WriteLine("Numero da conta:");
+    string numeroConta = Console.ReadLine();
+
+    Console.WriteLine("Numero da Agência:");
+    int numeroAgencia = Console.ReadLine();
+
+    ContaCorrente conta = new ContaCorrente(numeroConta, numeroAgencia);
+
+    Console.WriteLine("Insira o saldo inicial:");
+    conta.Saldo= double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Insira o nome do Titular:");
+    conta.Titular.Nome = Console.ReadLine();
+
+    Console.WriteLine("Insira o CPF do Titular:");
+    conta.Titular.Cpf= Console.ReadLine();
+
+    Console.WriteLine("Insira a profissão do Titular:");
+    conta.Titular.Profissao= Console.ReadLine();
+
+
+}
