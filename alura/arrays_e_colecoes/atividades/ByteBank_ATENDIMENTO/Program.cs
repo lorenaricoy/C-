@@ -1,6 +1,7 @@
 ﻿using bytebank.Modelos.Conta;
 using bytebank_ATENDIMENTO.bytebank.Util;
 using System;
+using System.Collections;
 
 Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
 
@@ -85,12 +86,12 @@ void TestaMedianaArray(Array array)
 void TestaArrayDeObjetos()
 {
     ListaDeContasCorrentes listadecontas = new ListaDeContasCorrentes();
-    listadecontas.adicionar(new ContaCorrente(873));
-    listadecontas.adicionar(new ContaCorrente(356));
-    listadecontas.adicionar(new ContaCorrente(892));
-    listadecontas.adicionar(new ContaCorrente(783));
-    listadecontas.adicionar(new ContaCorrente(028));
-    listadecontas.adicionar(new ContaCorrente(289));
+    listadecontas.adicionar(new ContaCorrente("8479834", 873));
+    listadecontas.adicionar(new ContaCorrente("7345837", 356));
+    listadecontas.adicionar(new ContaCorrente("8727383", 892));
+    listadecontas.adicionar(new ContaCorrente("6373827", 783));
+    listadecontas.adicionar(new ContaCorrente("7382749", 028));
+    listadecontas.adicionar(new ContaCorrente("1892097", 289));
     //ContaCorrente contadoAndre = new ContaCorrente(672);
     //listadecontas.adicionar(contadoAndre);
     //listadecontas.ExibeLista();
@@ -110,8 +111,11 @@ TestaArrayDeObjetos();
 
 #endregion
 
+ArrayList listadecontas = new ArrayList();
+AtendimentoCliente();
+
 void AtendimentoCliente(){
-    char opcao=0;
+    char opcao='0';
     while(opcao!='6'){
         Console.Clear();
         Console.WriteLine("=================================");
@@ -125,10 +129,16 @@ void AtendimentoCliente(){
         Console.WriteLine("=================================");
         Console.WriteLine("/n/n");
         Console.WriteLine("Digite a opção desejada: ");
-        opcao= Console.ReadLine();
+        opcao= char.Parse(Console.ReadLine());
 
         switch(opcao){
-            case '1':
+            case '1': 
+                CadastrarConta();
+                break;
+            
+            default:
+                System.Console.WriteLine( "opcao nao implementada");
+                break;
         }
     }
 } 
@@ -144,7 +154,7 @@ void CadastrarConta(){
     string numeroConta = Console.ReadLine();
 
     Console.WriteLine("Numero da Agência:");
-    int numeroAgencia = Console.ReadLine();
+    int numeroAgencia = int.Parse(Console.ReadLine());
 
     ContaCorrente conta = new ContaCorrente(numeroConta, numeroAgencia);
 
@@ -159,6 +169,14 @@ void CadastrarConta(){
 
     Console.WriteLine("Insira a profissão do Titular:");
     conta.Titular.Profissao= Console.ReadLine();
+
+    Console.Write("Infome Profissão do Titular: ");
+    conta.Titular.Profissao = Console.ReadLine();
+
+    listadecontas.Add(conta);
+
+    Console.WriteLine("... Conta cadastrada com sucesso! ...");
+    Console.ReadKey();
 
 
 }
