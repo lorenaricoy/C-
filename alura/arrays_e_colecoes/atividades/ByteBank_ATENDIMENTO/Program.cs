@@ -134,11 +134,25 @@ void AtendimentoCliente(){
         switch(opcao){
             case '1': 
                 CadastrarConta();
-                break;
-            
+            break;
+            case '2':
+                ListarConta();
+            break;
+            case '3':
+                ListarConta();
+            break;
+            case '2':
+                ListarConta();
+            break;
+            case '4':
+                ListarConta();
+            break;
+            case '5':
+                ListarConta();
+            break;
             default:
                 System.Console.WriteLine( "opcao nao implementada");
-                break;
+            break;
         }
     }
 } 
@@ -179,4 +193,28 @@ void CadastrarConta(){
     Console.ReadKey();
 
 
+}
+
+void ListarConta()
+{
+    Console.WriteLine("=================================");
+    Console.WriteLine("===     LISTAGEM DE CONTAS    ===");
+    Console.WriteLine("=================================");
+    Console.WriteLine("/n");
+
+    if(listadecontas.Count<=0){
+        System.Console.WriteLine("Não há contas cadastradas");
+        Console.ReadKey();
+        return;
+    }
+    foreach(ContaCorrente item in listadecontas){
+        Console.WriteLine("==== Dados da Conta ====");
+        Console.WriteLine($"Numero da conta: {item.Conta}");
+        Console.WriteLine($"Titular da : {item.Titular.Nome}");
+        Console.WriteLine ($"CPF do titular: {item.Cpf}");
+        Console.WriteLine($"Profissao do titular: {item.Titular.Profissao}");
+        Console.WriteLine("========================");
+
+
+    }
 }
