@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="bytebank.Modelos\NovaPasta\**" />
+    <EmbeddedResource Remove="bytebank.Modelos\NovaPasta\**" />
+    <None Remove="bytebank.Modelos\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="bytebank.Util\" />
   </ItemGroup>
 

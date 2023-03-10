@@ -1,5 +1,0 @@
-C:\Users\Alunos\Desktop\Lorena\C-Sharp\alura\arrays_e_colecoes\atividades\ByteBank_ATENDIMENTO\obj\Debug\net6.0\ByteBank_ATENDIMENTO.csproj.AssemblyReference.cache
-C:\Users\Alunos\Desktop\Lorena\C-Sharp\alura\arrays_e_colecoes\atividades\ByteBank_ATENDIMENTO\obj\Debug\net6.0\ByteBank_ATENDIMENTO.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alunos\Desktop\Lorena\C-Sharp\alura\arrays_e_colecoes\atividades\ByteBank_ATENDIMENTO\obj\Debug\net6.0\ByteBank_ATENDIMENTO.AssemblyInfoInputs.cache
-C:\Users\Alunos\Desktop\Lorena\C-Sharp\alura\arrays_e_colecoes\atividades\ByteBank_ATENDIMENTO\obj\Debug\net6.0\ByteBank_ATENDIMENTO.AssemblyInfo.cs
-C:\Users\Alunos\Desktop\Lorena\C-Sharp\alura\arrays_e_colecoes\atividades\ByteBank_ATENDIMENTO\obj\Debug\net6.0\ByteBank_ATENDIMENTO.csproj.CoreCompileInputs.cache
